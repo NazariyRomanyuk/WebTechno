@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="uk">
+    <meta charset="UTF-8">
+    <title>Homework 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+    <article class="selection-list">
+        <form class="adder">
+            <input type="text" class="input" placeholder="Назва товару" /> 
+            <button type="submit" class="adding" data-tooltip="Додати новий товар">Додати</button>
+        </form>
+
+        <section class="item-row" id="tomatoes">
+            <div class="name" contenteditable="false">
+                <p>Помідори</p>
+            </div>
+            <div class="quantity">
+                <button class="number">2</button>
+            </div>
+            <div class="status">
+                <button class="bought" data-tooltip="Показати статус (куплено/не куплено) товару">Не куплено</button>
+            </div>
+        </section>
+
+        <section class="item-row" id="cookies">
+            <div class="name" contenteditable="true">
+                <p>Печиво</p>
+            </div>
+            <div class="quantity">
+                <button class="minus" data-tooltip="Зменшити к-ть товару на 1">-</button>
+                <button class="number">2</button>
+                <button class="plus" data-tooltip="Збільшити к-ть товару на 1">+</button>
+            </div>
+            <div class="status">
+                <button class="bought" data-tooltip="Показати статус (куплено/не куплено) товару">Куплено</button>
+                <button class="cancel" data-tooltip="Видалити товар">×</button>
+            </div>
+        </section>
+
+        <section class="item-row" id="cheese">
+            <div class="name" contenteditable="true">
+                <p>Сир</p>
+            </div>
+            <div class="quantity">
+                <button class="minus" data-tooltip="Зменшити к-ть товару на 1">-</button>
+                <button class="number">1</button>
+                <button class="plus" data-tooltip="Збільшити к-ть товару на 1">+</button>
+            </div>
+            <div class="status">
+                <button class="bought" data-tooltip="Показати статус (куплено/не куплено) товару">Куплено</button>
+                <button class="cancel" data-tooltip="Видалити товар">×</button>
+            </div>
+        </section>
+    </article>
+    <article class="statistics">
+        <b class="title">Залишилося</b>
+        <div class="products">
+            <span class="product-item">
+		    Печиво
+		    <span class="amount">2</span>
+            </span>
+            <span class="product-item">
+		        Сир
+		    <span class="amount">1</span>
+            </span>
+        </div>
+
+        <b class="title">Куплено</b>
+        <div class="products" id="bottom">
+            <span class="delisted-product-item">
+		        Помідори
+		    <span class="amount-delisted">2</span>
+            </span>
+        </div>    
+    </article>    
+    <button class="badge">
+        <b class="buy-list">Buy List</b>
+        <p class="created-by">Created by:</p>
+        <p class="creator-name">Nazariy Romanyuk</p>
+    </button>
+</body>
+</html>

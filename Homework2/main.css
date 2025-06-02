@@ -57,6 +57,7 @@ body {
     justify-content: space-between;
     border-bottom: 2px solid #EFEFEF;
     overflow: visible;
+    margin-bottom: 5px;
 }
 #cheese {
     border-bottom: 0px;
@@ -131,6 +132,7 @@ body {
     border: 1px solid #C1C1C2;
     color: #616161;
     box-shadow: 0 4px #CFCFD0;
+    min-width: 67px;
 }
 
 .bought:hover {
@@ -255,28 +257,27 @@ body {
 }
 
 [data-tooltip] {
-  position: relative;
-  cursor: pointer;
-  z-index: 1;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
 }
 
 [data-tooltip]::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background-color: #AF00DA;
-  color: white;
-  font-size: 15px;
-  font-weight: normal;
-  padding: 9px 15px;
-  border-radius: 10px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 9999;
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #AF00DA;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 9px 15px;
+    border-radius: 10px;
+     white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 9999;
 }
 
 [data-tooltip]:hover::after {
@@ -303,6 +304,9 @@ body {
 
 
 @media print {
+    * {
+        print-color-adjust: exact;
+    }
     .badge {
         background-color: white;
         border: 2px solid #AF00DA;
